@@ -158,29 +158,15 @@ body {
   text-transform: uppercase;
 }
 
-.content .main .pay-form .form .card-front .card-holder::-webkit-input-placeholder {
-  line-height: normal;
+.content .main .pay-form .form .card-front .card-holder::-webkit-input-placeholder, .content .main .pay-form .form .card-front .card-holder::-webkit-input-placeholder {
+  line-height: normal !important;
   color: #bec6cf;
   font-size: 16px;
   text-transform: none;
 }
 
-.content .main .pay-form .form .card-front .card-holder:-ms-input-placeholder {
-  line-height: normal;
-  color: #bec6cf;
-  font-size: 16px;
-  text-transform: none;
-}
-
-.content .main .pay-form .form .card-front .card-holder::-ms-input-placeholder {
-  line-height: normal;
-  color: #bec6cf;
-  font-size: 16px;
-  text-transform: none;
-}
-
-.content .main .pay-form .form .card-front .card-holder::placeholder {
-  line-height: normal;
+.content .main .pay-form .form .card-front .card-holder::placeholder, .content .main .pay-form .form .card-front .card-holder::-webkit-input-placeholder {
+  line-height: normal !important;
   color: #bec6cf;
   font-size: 16px;
   text-transform: none;

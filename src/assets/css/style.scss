@@ -119,8 +119,8 @@ body {
                         padding-left: 11px;
                         line-height: normal;
                         text-transform: uppercase;
-                        &::placeholder {
-                            line-height: normal;
+                        &::placeholder, &::-webkit-input-placeholder {
+                            line-height: normal !important;
                             color: #bec6cf;
                             font-size: 16px;
                             text-transform: none
