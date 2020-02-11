@@ -154,28 +154,33 @@ body {
   height: 40px;
   border: 1px solid #e4e9ee;
   padding-left: 11px;
+  line-height: normal;
   text-transform: uppercase;
 }
 
 .content .main .pay-form .form .card-front .card-holder::-webkit-input-placeholder {
+  line-height: normal;
   color: #bec6cf;
   font-size: 16px;
   text-transform: none;
 }
 
 .content .main .pay-form .form .card-front .card-holder:-ms-input-placeholder {
+  line-height: normal;
   color: #bec6cf;
   font-size: 16px;
   text-transform: none;
 }
 
 .content .main .pay-form .form .card-front .card-holder::-ms-input-placeholder {
+  line-height: normal;
   color: #bec6cf;
   font-size: 16px;
   text-transform: none;
 }
 
 .content .main .pay-form .form .card-front .card-holder::placeholder {
+  line-height: normal;
   color: #bec6cf;
   font-size: 16px;
   text-transform: none;
