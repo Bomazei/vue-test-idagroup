@@ -20,14 +20,15 @@
 export default {
     name: 'success',
     beforeCreate() {
-        if (this.$store.state.lastTrans.length === 0){
-            this.$router.push('pay')
-        }
+        
     },
     computed: {
         curTrans: {
             get () {
-                return this.$store.state.lastTrans        
+                if (this.$store.state.lastTrans.length === 0){
+                    this.$router.push('pay')
+                }
+                else return this.$store.state.lastTrans        
             }
         }
     }

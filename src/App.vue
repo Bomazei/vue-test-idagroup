@@ -20,7 +20,7 @@
 <script>
 export default {
   name: 'app',
-  beforeMount(){
+  beforeCreate(){
     if (this.$route.path != '/pay') {
       this.$router.push('/pay')
     }

@@ -21,12 +21,11 @@ const routes = [
       },
       {
         path: '*',
-        component: Pay
+        component: '/pay'
       }
 ]
 
 const router = new VueRouter({
-  base: process.env.BASE_URL,
   mode: 'history',
   routes
 })
