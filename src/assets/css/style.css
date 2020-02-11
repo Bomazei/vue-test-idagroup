@@ -1,0 +1,486 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #101114;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto;
+}
+
+#menu__toggle {
+  opacity: 0;
+  display: none;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu .menu__item {
+  width: 320px;
+  height: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 29px;
+  background-color: #1f2229;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  word-wrap: wrap;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.content {
+  width: 70%;
+}
+
+.content .main {
+  background-color: #f7f8f8;
+  padding: 48px 48px 48px 28px;
+}
+
+.content .main .pay-info {
+  margin-bottom: 36px;
+  color: #8494ab;
+}
+
+.content .main .pay-info__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .main .pay-info__text {
+  width: 160px;
+}
+
+.content .main .pay-info__input {
+  border: 1px solid #e4e9ee;
+  padding-left: 5px;
+  height: 20px;
+}
+
+.content .main .pay-form .pay-form__title {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.content .main .pay-form .form {
+  margin-top: 28px;
+}
+
+.content .main .pay-form .form .card {
+  width: 350px;
+  height: 234px;
+  border: 1px solid #e4e9ee;
+  border-radius: 7px;
+}
+
+.content .main .pay-form .form .card-front {
+  position: relative;
+  background-color: #fff;
+  z-index: 10;
+  padding: 24px 0 13px 15px;
+}
+
+.content .main .pay-form .form .card-front .label {
+  color: #8494ab;
+}
+
+.content .main .pay-form .form .card-front .card-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 6px 0 18px 0;
+}
+
+.content .main .pay-form .form .card-front .card-number__input {
+  width: 63px;
+  height: 40px;
+  border: 1px solid #e4e9ee;
+  text-align: center;
+}
+
+.content .main .pay-form .form .card-front .card-number__input:not(last-child) {
+  margin-right: 9px;
+}
+
+.content .main .pay-form .form .card-front .card-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 6px 0 12px 0;
+}
+
+.content .main .pay-form .form .card-front .card-data .data-select {
+  width: 84px;
+  height: 40px;
+  border: 1px solid #e4e9ee;
+  padding-left: 10px;
+}
+
+.content .main .pay-form .form .card-front .card-data .data-select:first-child {
+  width: 70px;
+}
+
+.content .main .pay-form .form .card-front .card-data .data-select:not(last-child) {
+  margin-right: 9px;
+}
+
+.content .main .pay-form .form .card-front .card-holder {
+  width: 320px;
+  height: 40px;
+  border: 1px solid #e4e9ee;
+  padding-left: 11px;
+  text-transform: uppercase;
+}
+
+.content .main .pay-form .form .card-front .card-holder::-webkit-input-placeholder {
+  color: #bec6cf;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.content .main .pay-form .form .card-front .card-holder:-ms-input-placeholder {
+  color: #bec6cf;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.content .main .pay-form .form .card-front .card-holder::-ms-input-placeholder {
+  color: #bec6cf;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.content .main .pay-form .form .card-front .card-holder::placeholder {
+  color: #bec6cf;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.content .main .pay-form .form .card-back {
+  position: relative;
+  background-color: #fff;
+  z-index: 5;
+  margin: -214px 0 0 195px;
+}
+
+.content .main .pay-form .form .card-back:before {
+  content: '';
+  position: absolute;
+  height: 42px;
+  background-color: #e4e9ee;
+  width: 100%;
+  top: 25px;
+}
+
+.content .main .pay-form .form .card-back .card-label {
+  color: #8494ab;
+}
+
+.content .main .pay-form .form .card-back .card-cvv {
+  position: relative;
+  margin: 86px 0 0 200px;
+}
+
+.content .main .pay-form .form .card-back .card-cvv__input {
+  width: 136px;
+  height: 42px;
+  margin-top: 5px;
+  border: 1px solid #e4e9ee;
+  text-align: center;
+  background: url("../подсказка.png") no-repeat 100px 6px;
+}
+
+.content .main .pay-form .form .card-back .card-cvv__input:hover ~ .hint {
+  opacity: 1;
+}
+
+.content .main .pay-form .form .card-back .card-cvv .hint {
+  margin-top: 10px;
+  padding: 10px;
+  width: 120px;
+  height: 60px;
+  text-align: center;
+  border: 1px solid #e4e9ee;
+  color: #959595;
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.content .main .pay-form .form .invalid {
+  border-color: red !important;
+}
+
+.content .main .pay-form .form .button-submit {
+  width: 134px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #005abe;
+  color: #fff;
+  font-family: 'Open Sans';
+  font-weight: bold;
+  border: 0;
+  margin: 20px 0 0 15px;
+}
+
+.content .footer {
+  padding: 32px;
+  background-color: #373c43;
+  color: #87898a;
+  font-size: 12px;
+}
+
+.router-link-active {
+  background-color: #2a2d37 !important;
+  color: #87898a !important;
+}
+
+.router-link-active::after {
+  content: " (активная)";
+  white-space: pre;
+}
+
+.success__title {
+  font-family: 'Open Sans';
+  margin-bottom: 30px;
+}
+
+.success__info {
+  list-style-type: none;
+}
+
+.success__info .success__item {
+  font-family: 'Open Sans';
+  margin: 10px 0;
+}
+
+.history__title {
+  font-family: 'Open Sans';
+  margin-bottom: 30px;
+}
+
+.history__item {
+  list-style: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #e4e9ee;
+  border-radius: 10px;
+  font-family: 'Open Sans';
+}
+
+@media (max-width: 990px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .menu {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container .menu .menu__item {
+    padding-left: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .container .content {
+    width: 100%;
+  }
+  .router-link-active:after {
+    content: '';
+  }
+}
+
+@media (max-width: 480px) {
+  .container .content {
+    width: 100%;
+  }
+  .container .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 40px 0 0 0;
+  }
+  .container .main .pay-form .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .container .main .pay-form .form .card {
+    position: relative;
+  }
+  .container .main .pay-form .form .card-back {
+    margin: 0;
+  }
+  .menu__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 55;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -120%;
+    z-index: 50;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .menu .menu-item {
+    width: auto;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu {
+    visibility: visible;
+    left: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .container .content .main {
+    padding: 40px 0 0 0;
+  }
+  .container .content .main .pay-info__text {
+    width: 140px;
+  }
+  .container .content .main .pay-info__input {
+    width: 140px;
+  }
+  .container .content .main .pay-form {
+    margin-bottom: 50px;
+  }
+  .container .content .main .pay-form__title {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+  .container .content .main .pay-form .form .card {
+    width: 300px;
+    margin: 10px;
+  }
+  .container .content .main .pay-form .form .card-front {
+    padding: 10px 0 0 14px;
+  }
+  .container .content .main .pay-form .form .card-front .card-number__input {
+    width: 58px;
+  }
+  .container .content .main .pay-form .form .card-front .card-holder {
+    width: 270px;
+  }
+  .container .content .main .pay-form .form .card-back .card-cvv {
+    margin: 86px 0 0 150px;
+  }
+  .success {
+    margin-bottom: 20px;
+  }
+  .success__title {
+    text-align: center;
+  }
+  .history__title {
+    text-align: center;
+  }
+  .history__item {
+    margin: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

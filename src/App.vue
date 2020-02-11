@@ -1,28 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <input id="menu__toggle" type="checkbox">
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+      <ul class="menu">
+        
+        <li class="menu__item">Личный кабинет</li>
+        <router-link tag="li"  class="menu__item" to="/pay" exact>Платежи</router-link>
+        <router-link tag="li"  class="menu__item" to="/history">История платежей</router-link>
+        <li class="menu__item">Настройки</li>
+        <li class="menu__item">Выйти</li>
+      </ul>
+      <router-view></router-view>
+    </div>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: 'app',
+  beforeMount(){
+    if (this.$route.path != '/pay') {
+      this.$router.push('/pay')
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style src="./assets/css/style.css">
 </style>
