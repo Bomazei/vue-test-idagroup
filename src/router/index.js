@@ -18,10 +18,6 @@ const routes = [
       {
         path: '/pay-success',
         component: Success,
-      },
-      {
-        path: '*',
-        component: '/pay'
       }
 ]
 

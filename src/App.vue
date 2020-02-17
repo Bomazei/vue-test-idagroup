@@ -20,10 +20,8 @@
 <script>
 export default {
   name: 'app',
-  beforeCreate(){
-    if (this.$route.path != '/pay') {
-      this.$router.push('/pay')
-    }
+  created(){
+    this.$router.push('/pay')
   }
 }
 </script>
