@@ -23,6 +23,7 @@ export default {
         if (this.$store.state.lastTrans.length === 0){
             this.$router.push('pay')
         }
+        
     },
     computed: {
         curTrans: {
