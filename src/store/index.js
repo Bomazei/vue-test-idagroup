@@ -16,6 +16,9 @@ export default new Vuex.Store({
         },
         addLastTrans(state, trans) {
             state.lastTrans = trans
+        },
+        deleteLastTrans(state) {
+            state.lastTrans = []
         }
     }
 })

@@ -18,11 +18,14 @@ const routes = [
       {
         path: '/pay-success',
         component: Success,
+      },
+      {
+        path: '*',
+        redirect: '/pay'
       }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
   routes
 })
 

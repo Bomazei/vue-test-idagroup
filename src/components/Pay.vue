@@ -128,7 +128,7 @@ export default {
             }
             this.$store.commit('addTrans', trans)
             this.$store.commit('addLastTrans', trans)
-            this.$router.replace('pay-success')
+            this.$router.push('pay-success')
             
         },
         

@@ -19,7 +19,7 @@
 <script>
 export default {
     name: 'success',
-    beforeCreate() {
+    mounted(){
         if (this.$store.state.lastTrans.length === 0){
             this.$router.push('pay')
         }
@@ -27,7 +27,7 @@ export default {
     computed: {
         curTrans: {
             get () {
-                 return this.$store.state.lastTrans        
+                return this.$store.state.lastTrans        
             }
         }
     }

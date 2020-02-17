@@ -20,8 +20,12 @@
 <script>
 export default {
   name: 'app',
-  created(){
-    this.$router.push('/pay')
+  beforeUpdate(){
+    if(this.$route.path != '/pay-success') {
+      this.$store.commit('deleteLastTrans')
+    } else if (this.$store.state.lastTrans.length === 0 && this.$route.path === '/pay-success'){
+      this.$router.push('pay')
+    }
   }
 }
 </script>
